@@ -31,6 +31,15 @@ namespace cscondition
             Console.WriteLine(DateTime.Now.Minute + "분");
             Console.WriteLine(DateTime.Now.Second + "초");
 
+            // 오전과 오후 구분
+            var hour = DateTime.Now.Hour;
+            if (hour>=0 && hour<12)
+            {
+                Console.WriteLine("빠빠빠빰빰 빠빠빠빰! 굿뭘닝~ 오전입니다~!");
+            }else
+            {
+                Console.WriteLine("별이 빛나는 아름다운 봠이야이야~ 오후입니다~!");
+            }
         }
     }
 }

@@ -14,18 +14,28 @@ namespace cscondition
             // 짝수 홀수 구하기
             Console.Write("숫자 입력: ");
             var input = int.Parse(Console.ReadLine());
-            if(input % 2 == 0)
-            {
-                Console.WriteLine("짝수입니다!");
-            }
-            else
-            {
-                Console.WriteLine("홀수입니다!");
-            }
-            Console.WriteLine();
+            //if(input % 2 == 0)
+            //{
+            //    Console.WriteLine("짝수입니다!");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("홀수입니다!");
+            //}
+            //Console.WriteLine();
 
-            // 현재 시간 구하기
-            Console.WriteLine(DateTime.Now.Year + "년");
+            switch (input % 2)
+            {
+                case 0:
+                    Console.WriteLine("짝수입니다!");
+                    break;
+                case 1:
+                    Console.WriteLine("홀수입니다!");
+                    break;
+            }
+
+        // 현재 시간 구하기
+             Console.WriteLine(DateTime.Now.Year + "년");
             Console.WriteLine(DateTime.Now.Month + "월");
             Console.WriteLine(DateTime.Now.Day + "일");
             Console.WriteLine(DateTime.Now.Hour + "시");
@@ -48,6 +58,35 @@ namespace cscondition
                 Console.WriteLine("저녁 먹을 시간입니다~!");
             }
             Console.WriteLine();
+
+            Console.Write("이번 달은 몇 월인가요? : ");
+            int input2 = int.Parse(Console.ReadLine());
+            switch (input2)
+            {
+                case 12:
+                case 1:
+                case 2:
+                    Console.WriteLine("겨울입니다");
+                    break;
+                case 3:
+                case 4:
+                case 5:
+                    Console.WriteLine("봄입니다");
+                    break;
+                case 6:
+                case 7:
+                case 8:
+                    Console.WriteLine("여름입니다");
+                    break;
+                case 9:
+                case 10:
+                case 11:
+                    Console.WriteLine("가을입니다");
+                    break;
+                default:
+                    Console.WriteLine("대체 어떤 행성에 살고 계신가요?");
+                    break;
+            }
         }
     }
 }

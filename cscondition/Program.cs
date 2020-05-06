@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,16 +31,23 @@ namespace cscondition
             Console.WriteLine(DateTime.Now.Hour + "시");
             Console.WriteLine(DateTime.Now.Minute + "분");
             Console.WriteLine(DateTime.Now.Second + "초");
+            Console.WriteLine();
 
             // 오전과 오후 구분
             var hour = DateTime.Now.Hour;
-            if (hour>=0 && hour<12)
+            if (hour < 11)
             {
-                Console.WriteLine("빠빠빠빰빰 빠빠빠빰! 굿뭘닝~ 오전입니다~!");
-            }else
-            {
-                Console.WriteLine("별이 빛나는 아름다운 봠이야이야~ 오후입니다~!");
+                Console.WriteLine("아침 먹을 시간입니다~!");
             }
+            else if (hour < 15)
+            {
+                Console.WriteLine("점심 먹을 시간입니다~!");
+            }
+            else
+            {
+                Console.WriteLine("저녁 먹을 시간입니다~!");
+            }
+            Console.WriteLine();
         }
     }
 }

@@ -21,6 +21,16 @@ namespace cscondition
             {
                 Console.WriteLine("홀수입니다!");
             }
+            Console.WriteLine();
+
+            // 현재 시간 구하기
+            Console.WriteLine(DateTime.Now.Year + "년");
+            Console.WriteLine(DateTime.Now.Month + "월");
+            Console.WriteLine(DateTime.Now.Day + "일");
+            Console.WriteLine(DateTime.Now.Hour + "시");
+            Console.WriteLine(DateTime.Now.Minute + "분");
+            Console.WriteLine(DateTime.Now.Second + "초");
+
         }
     }
 }

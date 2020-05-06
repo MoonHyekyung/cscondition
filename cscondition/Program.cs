@@ -24,18 +24,21 @@ namespace cscondition
             //}
             //Console.WriteLine();
 
-            switch (input % 2)
-            {
-                case 0:
-                    Console.WriteLine("짝수입니다!");
-                    break;
-                case 1:
-                    Console.WriteLine("홀수입니다!");
-                    break;
-            }
+            //switch (input % 2)
+            //{
+            //    case 0:
+            //        Console.WriteLine("짝수입니다!");
+            //        break;
+            //    case 1:
+            //        Console.WriteLine("홀수입니다!");
+            //        break;
+            //}
 
-        // 현재 시간 구하기
-             Console.WriteLine(DateTime.Now.Year + "년");
+            Console.WriteLine(input % 2 == 0 ? "짝수입니다" : "홀수입니다");
+            Console.WriteLine(input > 0 ? "자연수입니다" : "자연수가 아닙니다");
+
+            // 현재 시간 구하기
+            Console.WriteLine(DateTime.Now.Year + "년");
             Console.WriteLine(DateTime.Now.Month + "월");
             Console.WriteLine(DateTime.Now.Day + "일");
             Console.WriteLine(DateTime.Now.Hour + "시");
